@@ -1,0 +1,26 @@
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>DPI</title>
+    </head>
+    <body>
+
+        <form action="/getDpi" method="post">
+            <input type="hidden" name="_csrf" value="{{csrf}}"/>
+            dpi : <input type="number" name="dpi"/>
+            <br><br><br>
+            오차 5개
+            <input type="number" name="errors"/>
+            <input type="number" name="errors"/>
+            <input type="number" name="errors"/>
+            <input type="number" name="errors"/>
+            <input type="number" name="errors"/>
+
+            <br>
+            <button type="submit">제출</button>
+        </form>
+        {{#res}}
+            <p>응답: {{res}}</p>
+        {{/res}}
+    </body>
+</html>

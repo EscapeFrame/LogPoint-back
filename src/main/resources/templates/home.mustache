@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Home Page</h1>
+<h1>덕현아 안녕~</h1>
+<p>{{message}}</p>
+{{^isLogin}}
+    <a href="/signup">Sign Up</a> | <a href="/signin">Sign In</a>
+{{/isLogin}}
+{{#isLogin}}
+    {{userName}}<br>
+    <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{csrf}}"/>
+        <button type="submit">Log Out</button>
+    </form>
+{{/isLogin}}
+<a href="/dpi">dpi</a>
+</body>
+</html>

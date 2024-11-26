@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <title>Auth</title>
+</head>
+<body>
+    <h1>Auth Page</h1>
+<!--    <form id="authForm" method="post" action="/auth">-->
+<!--        <input type="hidden" name="_csrf" value="{{csrf}}"/>-->
+<!--    </form>-->
+<!--    <form action="/auth" method="post">-->
+<!--        <input type="hidden" name="_csrf" value="{{csrf}}"/>-->
+<!--        <input type="button" value="csrf">-->
+<!--    </form>-->
+    <form action="/auth" method="post">
+        인증코드 : <input type="text" name="number"/>
+        <input type="hidden" name="_csrf" value="{{csrf}}"/>-->
+        <button type="submit">제출</button>
+    </form>
+</body>
+
+</html>

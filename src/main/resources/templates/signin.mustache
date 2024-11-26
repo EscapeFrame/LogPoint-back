@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Sign In</h1>
+<h1>로그인</h1>
+{{#errorMessage}}
+    <p style="color: red;">{{errorMessage}}</p>
+{{/errorMessage}}
+<form action="/signin" method="post">
+    <input type="hidden" name="_csrf" value="{{csrf}}"/>
+    <label for="userName">Username:</label>
+    <input type="text" id="userName" name="userName" required><br>
+    <label for="userPassword">Password:</label>
+    <input type="password" id="userPassword" name="userPassword" required><br>
+    <button type="submit">Sign In</button>
+</form>
+<a href="/">Back to Home</a>
+</body>
+</html>
